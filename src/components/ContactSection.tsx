@@ -39,8 +39,8 @@ export function ContactSection() {
       icon: MapPin,
       labelEn: 'Address',
       labelHi: 'पता',
-      valueEn: 'Main Road, Rafiganj, Bihar',
-      valueHi: 'मुख्य सड़क, रफीगंज, बिहार',
+      valueEn: 'Main Road, Rafiganj, Gaya District, Bihar 824125',
+      valueHi: 'मुख्य सड़क, रफीगंज, गया जिला, बिहार 824125',
       link: 'https://maps.google.com/?q=Rafiganj,Bihar',
     },
     {

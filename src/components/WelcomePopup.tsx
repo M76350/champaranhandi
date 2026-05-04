@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Dialog,
@@ -7,6 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
+import welcomeCooking from '@/assets/welcome-champaran-handi-cooking.jpg';
 
 const WELCOME_KEY = 'pchm-welcomed';
 
@@ -14,13 +14,9 @@ export function WelcomePopup() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Check if user has visited before
     const hasVisited = localStorage.getItem(WELCOME_KEY);
     if (!hasVisited) {
-      // Show popup after a short delay
-      const timer = setTimeout(() => {
-        setIsOpen(true);
-      }, 1500);
+      const timer = setTimeout(() => setIsOpen(true), 1500);
       return () => clearTimeout(timer);
     }
   }, []);
@@ -44,8 +40,8 @@ export function WelcomePopup() {
         {/* Image Header */}
         <div className="relative h-48 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1545247181-516773cae754?w=600"
-            alt="Champaran Handi Mutton"
+            src={welcomeCooking}
+            alt="Champaran Handi Mutton cooking — Purvi Champaran Handi Meat Rafiganj"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
@@ -65,12 +61,14 @@ export function WelcomePopup() {
 
           <p className="text-muted-foreground mb-6">
             <span className="en-text">
-              Experience the authentic taste of Champaran Handi Mutton - 
+              Experience the authentic taste of Champaran Handi Mutton —
               slow-cooked in traditional clay pots with secret family spices.
+              Located in Rafiganj, Gaya District, Bihar.
             </span>
             <span className="hi-text hindi-text">
-              चम्पारण हांडी मटन का प्रामाणिक स्वाद अनुभव करें - 
+              चम्पारण हांडी मटन का प्रामाणिक स्वाद अनुभव करें —
               पारंपरिक मिट्टी के बर्तनों में गुप्त पारिवारिक मसालों के साथ धीमी आंच पर पकाया गया।
+              रफीगंज, गया जिला, बिहार में स्थित।
             </span>
           </p>
 

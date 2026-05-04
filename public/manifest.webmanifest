@@ -1,0 +1,59 @@
+{
+  "name": "Purvi Champaran Handi Meat, Rafiganj",
+  "short_name": "Champaran Handi",
+  "description": "Best Champaran Handi Mutton in Rafiganj, Gaya District, Bihar. Old traditional recipes, clay pot slow-cooked mutton. Nearest to Aurangabad, Sasaram, Dehri-on-Sone.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdf6ec",
+  "theme_color": "#E85D04",
+  "orientation": "portrait-primary",
+  "lang": "en-IN",
+  "categories": ["food", "restaurant", "lifestyle"],
+  "icons": [
+    {
+      "src": "/handi-meat-logo.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/handi-meat-logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/handi-meat-logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "label": "Purvi Champaran Handi Meat Homepage"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Menu",
+      "short_name": "Menu",
+      "description": "Browse our full menu",
+      "url": "/menu",
+      "icons": [{ "src": "/handi-meat-logo.webp", "sizes": "96x96" }]
+    },
+    {
+      "name": "Order on WhatsApp",
+      "short_name": "Order",
+      "description": "Place an order via WhatsApp",
+      "url": "https://wa.me/917424961362?text=Hi,%20I%20would%20like%20to%20place%20an%20order",
+      "icons": [{ "src": "/handi-meat-logo.webp", "sizes": "96x96" }]
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with us",
+      "url": "/contact",
+      "icons": [{ "src": "/handi-meat-logo.webp", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

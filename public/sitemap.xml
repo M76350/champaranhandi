@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://champaran-delight.vercel.app/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://champaran-delight.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://champaran-delight.vercel.app/"/>
+    <image:image>
+      <image:loc>https://champaran-delight.vercel.app/handi-meat-logo.webp</image:loc>
+      <image:title>Purvi Champaran Handi Meat, Rafiganj — Best Champaran Handi Mutton Bihar</image:title>
+    </image:image>
+  </url>
+
+  <!-- Menu -->
+  <url>
+    <loc>https://champaran-delight.vercel.app/menu</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://champaran-delight.vercel.app/about</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://champaran-delight.vercel.app/contact</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog listing -->
+  <url>
+    <loc>https://champaran-delight.vercel.app/blog</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Blog post 1 -->
+  <url>
+    <loc>https://champaran-delight.vercel.app/blog/how-champaran-mutton-is-cooked-traditional-style</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://thumbs.dreamstime.com/b/champaran-mutton-handi-mutton-ahuna-mutton-champaran-meat-also-called-ahuna-popular-dish-bihar-state-india-253105613.jpg</image:loc>
+      <image:title>How Champaran Mutton is Cooked in Traditional Style — Purvi Champaran Handi Meat Rafiganj</image:title>
+    </image:image>
+  </url>
+
+  <!-- Blog post 2 -->
+  <url>
+    <loc>https://champaran-delight.vercel.app/blog/best-non-veg-restaurants-rafiganj-near-gaya-aurangabad</loc>
+    <lastmod>2025-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://ik.imagekit.io/munchery/blog/tr:w-768/from-punjab-to-tamil-nadu-a-tour-of-ten-indian-thalis.jpeg</image:loc>
+      <image:title>Best Non-Veg Restaurants in Rafiganj Near Gaya and Aurangabad Bihar</image:title>
+    </image:image>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://champaran-delight.vercel.app/privacy-policy</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://champaran-delight.vercel.app/terms</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Disclaimer -->
+  <url>
+    <loc>https://champaran-delight.vercel.app/disclaimer</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

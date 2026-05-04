@@ -1,0 +1,5 @@
+Contact: mailto:champaranmeatrafiganj@gmail.com
+Preferred-Languages: en, hi
+Canonical: https://champaran-delight.vercel.app/.well-known/security.txt
+Policy: https://champaran-delight.vercel.app/privacy-policy
+Expires: 2026-12-31T23:59:59.000Z

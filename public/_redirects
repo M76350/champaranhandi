@@ -1,0 +1,7 @@
+# Netlify / Vercel SPA redirects
+# All routes → index.html (React Router handles routing)
+/*    /index.html   200
+
+# Legacy URL redirects (if any old URLs exist)
+/home    /    301
+/index   /    301

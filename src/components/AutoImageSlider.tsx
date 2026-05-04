@@ -1,6 +1,14 @@
 // src/components/AutoSlider.tsx
 
 import React from 'react';
+import slideChamparan from '@/assets/slider/slide-champaran-handi-mutton.jpg';
+import slideBiryaniPot from '@/assets/slider/slide-mutton-biryani-copper-pot.jpg';
+import slideDumBiryani from '@/assets/slider/slide-dum-mutton-biryani.jpg';
+import slideKolkataBiryani from '@/assets/slider/slide-kolkata-mutton-biryani.jpg';
+import slideChickenBiryani from '@/assets/slider/slide-chicken-biryani-herbs.jpg';
+import slideSpicyBiryani from '@/assets/slider/slide-spicy-mutton-biryani.jpg';
+import slideGrandThali from '@/assets/slider/slide-grand-thali-platter.jpg';
+import slideTraditionalThali from '@/assets/slider/slide-traditional-mutton-thali.jpg';
 
 interface Slide {
   id: string;
@@ -11,42 +19,42 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: '05',
-    image: 'https://thumbs.dreamstime.com/b/champaran-mutton-handi-mutton-ahuna-mutton-champaran-meat-also-called-ahuna-popular-dish-bihar-state-india-253105613.jpg',
+    image: slideChamparan,
     title: 'Champaran Handi Mutton',
   },
   {
     id: '06',
-    image: 'https://thumbs.dreamstime.com/b/steaming-hot-mutton-chicken-biryani-ghee-whole-spices-traditional-copper-pot-ai-generated-414661138.jpg',
+    image: slideBiryaniPot,
     title: 'Authentic Champaran Ahuna Mutton',
   },
   {
     id: '07',
-    image: 'https://static.toiimg.com/thumb/53100174.cms?width=1200&height=900',
+    image: slideDumBiryani,
     title: 'Dum Style Mutton Biryani',
   },
   {
     id: '08',
-    image: 'https://images.squarespace-cdn.com/content/v1/5e558c8165fc4c78f502938d/1632759442881-2EGKV8MH7BNF8VY9WROY/1024px-Kolkata_Biryani.jpg',
+    image: slideKolkataBiryani,
     title: 'Rich Mutton Biryani with Egg & Potato',
   },
   {
     id: '09',
-    image: 'https://thumbs.dreamstime.com/b/delicious-chicken-biryani-fresh-herbs-vibrant-colors-silver-tray-appetizing-image-showcases-flavorful-chicken-422384849.jpg',
+    image: slideChickenBiryani,
     title: 'Hyderabadi Chicken Biryani',
   },
   {
     id: '10',
-    image: 'https://paattiskitchen.com/wp-content/uploads/2023/03/kmc_20230323_230721.jpg',
+    image: slideSpicyBiryani,
     title: 'Spicy Mutton Biryani South Indian Style',
   },
   {
     id: '11',
-    image: 'https://ik.imagekit.io/munchery/blog/tr:w-768/from-punjab-to-tamil-nadu-a-tour-of-ten-indian-thalis.jpeg',
+    image: slideGrandThali,
     title: 'Grand Mutton Thali Platter',
   },
   {
     id: '12',
-    image: 'https://thumbs.dreamstime.com/b/traditional-indian-thali-meal-thaali-consisting-different-curries-like-sev-tomato-na-shak-aloo-gobhicauliflower-curry-109155016.jpg',
+    image: slideTraditionalThali,
     title: 'Traditional Indian Mutton Thali',
   },
 ];

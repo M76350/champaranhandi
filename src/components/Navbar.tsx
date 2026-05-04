@@ -1,14 +1,24 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, Sun, Moon, Phone } from 'lucide-react';
+import { Menu, Sun, Moon, Phone, LogIn, User, LayoutDashboard, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import { useTheme } from '@/hooks/useTheme';
+import { useAuth } from '@/hooks/useAuth';
 import { NavLink } from './NavLink';
 import { CartButton } from './CartDrawer';
+import { toast } from 'sonner';
 const navLinks = [
   { to: '/', labelEn: 'Home', labelHi: 'होम' },
   { to: '/menu', labelEn: 'Menu', labelHi: 'मेन्यू' },
+  { to: '/blog', labelEn: 'Blog', labelHi: 'ब्लॉग' },
   { to: '/about', labelEn: 'About', labelHi: 'हमारे बारे में' },
   { to: '/contact', labelEn: 'Contact', labelHi: 'संपर्क' },
 ];
@@ -17,7 +27,13 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const { user, isAuthenticated, isAdmin, logout } = useAuth();
   const location = useLocation();
+
+  const handleLogout = () => {
+    logout();
+    toast.success('Logged out successfully');
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -104,6 +120,45 @@ export function Navbar() {
               </Button>
             </a>
 
+            {/* User menu */}
+            {isAuthenticated ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/10 hidden md:flex">
+                    <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center text-xs font-bold text-primary">
+                      {user?.name?.charAt(0).toUpperCase()}
+                    </div>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-48">
+                  <div className="px-3 py-2">
+                    <p className="text-sm font-medium text-foreground">{user?.name}</p>
+                    <p className="text-xs text-muted-foreground capitalize">{user?.role}</p>
+                  </div>
+                  <DropdownMenuSeparator />
+                  {isAdmin && (
+                    <DropdownMenuItem asChild>
+                      <Link to="/admin" className="flex items-center gap-2 cursor-pointer">
+                        <LayoutDashboard className="h-4 w-4" />
+                        Admin Panel
+                      </Link>
+                    </DropdownMenuItem>
+                  )}
+                  <DropdownMenuItem onClick={handleLogout} className="text-destructive focus:text-destructive gap-2 cursor-pointer">
+                    <LogOut className="h-4 w-4" />
+                    Logout
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Link to="/login" className="hidden md:flex">
+                <Button variant="outline" size="sm" className="gap-2 border-primary/40 hover:bg-primary/10">
+                  <LogIn className="h-4 w-4" />
+                  Login
+                </Button>
+              </Link>
+            )}
+
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild className="md:hidden">
@@ -156,6 +211,38 @@ export function Navbar() {
                       <span className="hi-text hindi-text">व्हाट्सएप पर ऑर्डर करें</span>
                     </Button>
                   </a>
+
+                  {/* Mobile auth */}
+                  <div className="flex flex-col gap-2 mt-2">
+                    {isAuthenticated ? (
+                      <>
+                        <div className="flex items-center gap-2 px-1 py-2 text-sm text-muted-foreground">
+                          <User className="h-4 w-4" />
+                          <span>{user?.name}</span>
+                          <span className="text-xs capitalize bg-primary/10 text-primary px-2 py-0.5 rounded-full">{user?.role}</span>
+                        </div>
+                        {isAdmin && (
+                          <Link to="/admin">
+                            <Button variant="outline" size="sm" className="w-full gap-2">
+                              <LayoutDashboard className="h-4 w-4" />
+                              Admin Panel
+                            </Button>
+                          </Link>
+                        )}
+                        <Button variant="outline" size="sm" onClick={handleLogout} className="w-full gap-2 text-destructive border-destructive/30">
+                          <LogOut className="h-4 w-4" />
+                          Logout
+                        </Button>
+                      </>
+                    ) : (
+                      <Link to="/login">
+                        <Button variant="outline" size="sm" className="w-full gap-2">
+                          <LogIn className="h-4 w-4" />
+                          Login / Register
+                        </Button>
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </SheetContent>
             </Sheet>

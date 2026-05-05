@@ -1,6 +1,3 @@
-import { Navbar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
-import { WhatsAppFloatingButton } from '@/components/TawkToWidget';
 import { FileText, Mail, Phone } from 'lucide-react';
 
 const LAST_UPDATED = 'May 1, 2025';
@@ -11,7 +8,6 @@ const PHONE = '+91 7424961362';
 export default function Terms() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
 
       {/* Hero */}
       <section className="pt-28 pb-10 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10 border-b border-border/50">
@@ -153,9 +149,6 @@ export default function Terms() {
 
         </div>
       </div>
-
-      <Footer />
-      <WhatsAppFloatingButton />
     </div>
   );
 }

@@ -1,8 +1,5 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
-import { WhatsAppFloatingButton } from '@/components/TawkToWidget';
 import { blogPosts, blogCategories } from '@/data/blogPosts';
 import { Clock, User, Tag, ArrowRight, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -17,7 +14,6 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
 
       {/* Hero banner */}
       <section className="pt-28 pb-12 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10 border-b border-border/50">
@@ -153,9 +149,6 @@ export default function Blog() {
           </div>
         </div>
       </section>
-
-      <Footer />
-      <WhatsAppFloatingButton />
     </div>
   );
 }

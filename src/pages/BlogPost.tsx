@@ -1,9 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { Navbar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
-import { WhatsAppFloatingButton } from '@/components/TawkToWidget';
 import { blogPosts } from '@/data/blogPosts';
-import { Clock, User, Tag, ArrowLeft, ArrowRight, Share2, Phone } from 'lucide-react';
+import { Clock, User, Tag, ArrowLeft, ArrowRight, Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -127,7 +124,6 @@ export default function BlogPost() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
 
       {/* Hero image */}
       <div className="relative h-72 md:h-96 mt-16 overflow-hidden">
@@ -271,9 +267,6 @@ export default function BlogPost() {
           </div>
         )}
       </div>
-
-      <Footer />
-      <WhatsAppFloatingButton />
     </div>
   );
 }
